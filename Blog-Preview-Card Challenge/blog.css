@@ -1,0 +1,27 @@
+body{
+    padding-top:26px;
+    background-color:#F4D04E;
+}
+
+
+.card-container{
+
+margin:auto;
+display:grid;
+place-items:center;
+grid-template-columns: 1fr;
+width: 384px;
+height: 522px;
+border-radius: 20px;
+background-color: white;
+border: 1px solid #111111; 
+ box-shadow: 0 4px 8px rgba(17, 17, 17, 100);
+}
+
+.card-image{
+  border-radius: 10px;
+    width: 100%;
+    height: auto;      
+    display: block;     
+    margin: 0 auto;
+}
