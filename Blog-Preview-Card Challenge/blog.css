@@ -55,3 +55,8 @@ h2:hover{
 color:#F4D04E; 
 cursor:pointer; 
 }
+.title-container{
+  display:flex;
+  margin-top:16px;
+  justify-content:left;
+}
