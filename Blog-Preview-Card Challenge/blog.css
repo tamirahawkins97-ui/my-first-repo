@@ -2,7 +2,7 @@ body{ min-height:100vh;
   display:flex; 
   justify-content:center; 
   align-items:center; 
-  background:#F4D04E; 
+  background:hsl(47, 88%, 63%); 
   padding-top:26px; 
   font-family: "Figtree", sans-serif; font-optical-sizing: auto; 
   font-style: normal; 
@@ -16,12 +16,12 @@ margin:auto;
 display:grid; 
 place-items:center; 
 grid-template-columns: 1fr; 
-width: 384px; 
-height: 522px;
+min-width: 384px; 
+min-height:522px ;
 border-radius: 20px; 
 background-color: white; 
 border: 1px solid #111111; 
-box-shadow: 8px 8px 0 #111; 
+box-shadow: 8px 10px 0 #111; 
 }  
 
 .card-image{
@@ -32,10 +32,13 @@ display: block;
 margin: 0 auto; 
 } 
 .title-card{ 
-display:inline-block; 
+font-size:16px;
+display: flex;
+align-items:flex-end;
 background-color:hsl(47, 88%, 63%); 
 border-radius: 4px;
 padding: 6px 12px; 
+
 } 
       
 .author{ 
