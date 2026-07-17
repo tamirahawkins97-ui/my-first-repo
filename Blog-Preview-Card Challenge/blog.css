@@ -31,14 +31,15 @@ height: auto;
 display: block; 
 margin: 0 auto; 
 } 
-.title-card{ 
-font-size:16px;
-display: flex;
-align-items:flex-end;
-background-color:hsl(47, 88%, 63%); 
-border-radius: 4px;
-padding: 6px 12px;
-
+.title-card { 
+  font-size: 14px;
+  font-weight: 800;
+  display: inline-block;
+  background-color: hsl(47, 88%, 63%);
+  border-radius: 4px;
+  padding: 6px 12px;
+  margin: 0;
+  margin-top: 16px;
 }
       
 .author{ 
