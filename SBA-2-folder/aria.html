@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Brewing Baby Shower</title>
+    <link rel="stylesheet" href="css/aria-shower.css">
+</head>
+<body>
+<header role ="banner">
+    <section class="hero">
+        <h1>Brewing Baby Shower</h1>
+        <p>Join us for a celebration of love and new beginnings!</p>
+        <nav role ="navigation">   
+            <ul class="nav-links a">
+                
+            <li><a href="#about">About</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#registry">Registry</a></li> 
+            <li><a href="#baby-form">Baby Form</a></li>
+            <li><a href="#contact">Contact</a></li></ul>
+        </nav>
+    </section>
+</header>
+<main>
+ <div class="card-container">    
+        <section id="about"><h3>About</h3>
+          <p>We are thrilled to invite you to our Brewing Baby Shower! This special event is a celebration of the upcoming arrival of our expresso shot of joy! Join us for an afternoon filled with joy, laughter, and love as we gather to honor this new chapter in our lives.</p>
+            <article class="card"><h5>Event Details</h5>
+                <p>Date: Saturday, June 15th, 2024</p>
+                <p>Time: 2:00 PM - 5:00 PM</p>
+                <p>Location: 123 Coffee Lane, Brewtown</p>
+                <p>Games will become available once everyone has submitted their Name and Availability.</p>    
+            </article>
+         </section>
+    </div>
+
+    <div class="card-container"> 
+        <section id="home"><h3>Home</h3>
+            <p>Welcome to our Brewing Baby Shower! We are excited to share this special moment with you. Please explore our website to learn more about the event, view our registry, and RSVP.</p>
+         <article class="card"><h5>RSVP</h5>
+            <p>Please let us know if you can join us by filling out the RSVP form below. We can't wait to celebrate with you!</p>
+            <form>
+                <label for="availability">Availibility:</label>
+                <textarea
+                name="availability"
+                id="availability"
+                rows="4"
+                maxlength="80"
+                placeholder="Enter your message (80 characters max)..."
+                aria-required="true"
+                aria-invalid="false"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+
+<div class="card-container">
+    <section id="registry"><h3>Registry</h3> <p>Please follow the list below to see what we would like to receive as gifts:</p>
+         <article class="card"><h5>What to bring</h5><p>We have created a registry to help you choose the perfect gift for our little one. Your presence is the greatest gift, but if you wish to contribute, we would greatly appreciate it.</p>
+                <ul class="list-text"> 
+                    <li>Wipes</li>   
+                    <li>Diapers</li>
+                    <li>Baby Clothes</li>
+                    <li>Baby Food</li>
+                </ul>
+        </article>
+    </section>
+</div>
+<div class="card-container"> 
+    <section id="baby-form"><h3>Baby Form</h3><p>Let's add a bit of a twist to your experience with our baby shower website! Select one of the options below to submit your guess on weather or not the parents will have a boy or a girl!</p>
+        <article class="card"><h5>Guess the babies Gender!</h5>
+            <form>  
+                <label for="boy">Boy</label>
+                <input type="radio"
+                id="boy" 
+                name="baby-gender" 
+                value="boy">
+        
+                <label for="girl">Girl</label>
+                <input 
+                type="radio"
+                id="girl" 
+                name="baby-gender" 
+                value="girl">
+                <button type="submit">Submit</button></button> 
+            </form>   
+        </article>  
+    </section>
+</div>
+    <div class="card-container"></div>
+        <section id="contact"><h3>Contact</h3><p>Here's where you can contact us with any questions and concerns you may have! </p>    
+         <article class="card"><h5>Contact Us Below!</h5>
+                <div class="form-group contact"></div>
+                    <form>
+                    <label for="full-name">Full Name:</label>
+                    <input type="full-name"
+                    name="full-name"
+                    id="full-name"
+                    placeholder="John Doe"
+                    required
+                    aria-required="true"
+                    Aria-invalid="false"></inp>
+                    </form>
+
+                    <form>
+                    <label for="email">Email:</label>
+                    <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="example@email.com"
+                    required
+                    aria-required="true"
+                    Aria-invalid="false">
+                    </input>
+                    </form>
+
+                    <form>
+                    <label for="additional-information">Addtional Information:</label>
+                    <textarea
+                    name="additional-information"
+                    id="additional-information"
+                    rows="6"
+                    maxlength="80"
+                    placeholder="Add any additional information you'd like to include (80 characters max)..."
+                    aria-required="true"
+                    aria-invalid="false"></textarea>
+                    <button type="submit">Submit</button></form>
+                </div>
+            </article>
+        </section>
+    </div>
+
+<p id="greeting">Can't wait to see you there!</p><br>
+    <footer class="site-footer">
+        <p>&copy; 2026 Brew Haven. All rights reserved.</p>
+        <p>Crafting every cup with care.</p>
+    </footer>
+</main>
+</body>
+</html>
