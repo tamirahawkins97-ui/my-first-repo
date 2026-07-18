@@ -1,4 +1,5 @@
   
+
 body{
 margin:128px;
   font-family: "Outfit", sans-serif;
@@ -30,13 +31,12 @@ border-radius: 10px;
 }
 
 #card-title{
-    padding-top:24px;
-    padding-bottom:16px;
-    margin:0;
-    text-align:center;
-    font-size:22px;
-    color:#1F314F;
-    line-height:120%;
+padding-top:24px;
+padding-bottom:16px;
+margin:0;  text-align:center;  
+font-size:22px;  
+color:#1F314F;
+line-height:120%;
 }
 
 p{
@@ -48,6 +48,32 @@ font-size:15px;
 }
 
 #footer-image{
-  display: block;
-    margin: 0 auto;
+display: block;
+margin: 0 auto;
+}
+
+.shadow-lg {
+display:flex;
+justify-content: center;
+box-shadow:
+0 0 20px rgba(229, 7, 200, 0.8),
+0 0 60px rgba(229, 7, 200, 0.5),
+0 1rem 10rem rgba(229, 7, 200, 0.3);
+}
+.bg-body-tertiary {
+background-color: #f8def7a1;
+}
+.shadow-container {
+display: block;
+width: fit-content;
+margin: 0 auto;
+text-shadow: 5px 0 12px rgba(0,0,0,.5);
+padding-bottom: 32px;
+padding-left: 16px;
+padding-right: 16px;
+}
+
+.shadow-text{
+margin:auto;
+color:darkviolet;
 }
