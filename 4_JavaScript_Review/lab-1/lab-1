@@ -1,0 +1,72 @@
+// Task 1
+
+function formatfullName(lastName, firstName) {
+firstName = firstName .charAt(0).toUpperCase() + firstName .slice(1) .toLowerCase();
+lastName = lastName .charAt(0).toUpperCase() + lastName .slice(1) .toLowerCase();
+console.log(lastName + " " + firstName); //Output; Tamira Hawkins
+}
+formatfullName("hawkins, tamira");
+
+if(firstName === "" || lastName === "") {
+    return "Invaild entry";
+
+}
+
+//Task 2 
+function calculateTotalCost(price, quantity, taxRate) {
+const totalCost = (price * quantity) * (1 + taxRate);
+return totalCost;
+}
+console.log(calculateTotalCost(40,5,.10)); //output 220
+if (
+    typeof price !== "number" || 
+    typeof quantity !== "number" ||
+    typeof taxRate !== "number" 
+) {
+    return "Invalid Input";
+}
+
+//Task 3
+
+function checkEligibility(age, isEmployed){
+     age > 18 && isEmployed === true
+     age < 18 && isEmployed === false 
+
+}
+ccheckEligibility(23, true);
+
+//Task 4                                     // 1. Define the function: function functionName(parameters) {}
+   /*1. Receive inputs                               Input 
+       - price
+       - quantity
+       - taxRate
+       - optional discount
+
+    2. Validate input data types                    Validation  
+       - Confirm all values are numbers
+       - If any value is invalid, stop the function
+         and return "Invalid Input"
+
+    3. Process calculation                          Processing 
+       - Calculate subtotal (price * quantity)
+       - Subtract discount (if provided)
+       - Apply tax rate
+
+    4. Return final result                             Output
+       - Send calculated total back to the caller
+    */
+
+function calculateTotalCost(price, quantity, taxRate, discount = 0) {
+if (
+    typeof price !== "number" ||
+    typeof quantity !== "number" ||
+    typeof discount !== "number" || 
+    typeof taxRate !== "number"
+    
+) {
+    return "Invalid Input";
+} 
+const totalCost = (price * quantity - discount ) * (1 + taxRate);
+return totalCost;
+}
+console.log(calculateTotalCost(40,5,.10, 30)); //output 187
