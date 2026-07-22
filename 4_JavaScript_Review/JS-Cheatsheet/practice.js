@@ -230,3 +230,30 @@ button.addEventListener("click", function(){
     addItem("Pizza", 10);
 
 });
+
+// WHAT INFORMATION DO I NEED?
+// → Variables / Objects
+
+
+// WHAT CAN CHANGE?
+// → let variables
+
+
+// WHAT DECISIONS HAPPEN?
+// → if / else / switch
+
+
+// WHAT REPEATS?
+// → loops
+
+
+// WHAT ACTION NEEDS TO HAPPEN?
+// → functions
+
+
+// WHAT DOES THE USER DO?
+// → events
+
+
+// WHAT DOES THE USER SEE?
+// → DOM manipulation
