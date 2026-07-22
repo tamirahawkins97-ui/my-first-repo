@@ -1,101 +1,232 @@
-// =============================                        
-// 1. STATE (Program Memory)
-// =============================
+// ==================================================
+// JAVASCRIPT TASK FLOW: FROM WORDING → CODE ACTION
+// ==================================================
 
-let game = {
-    computerMove: "rock",
-    playerMove: "",
-    result: ""
+
+// --------------------------------------------------
+// 1. "Create / Define / Initialize"
+// --------------------------------------------------
+
+// Prompt wording:
+// "Create a variable called ___"
+// "Create an object that stores ___"
+// "Initialize ___ with a starting value"
+
+// Think:
+// "What information does my program need to remember?"
+
+let cart = {
+    items: [],        // stores multiple values
+    total: 0          // stores changing information
 };
 
 
-// =============================
-// 2. DOM CONNECTIONS
-// (Grab HTML elements)
-// =============================
 
-let rockBtn = document.getElementById("rockBtn");
-let paperBtn = document.getElementById("paperBtn");
-let scissorsBtn = document.getElementById("scissorsBtn");
+// --------------------------------------------------
+// 2. "Create a Function"
+// --------------------------------------------------
 
-let result = document.getElementById("result");
+// Prompt wording:
+// "Write a function called ___"
+// "Create a function that performs ___"
+// "Define a function to handle ___"
+
+// Think:
+// "What action does my program need to perform?"
+
+function addItem(item, price) {
+
+    // --------------------------------------------------
+    // 3. "Accept / Pass Information"
+    // --------------------------------------------------
+
+    // Prompt wording:
+    // "The function takes ___ as a parameter"
+    // "Pass the item into the function"
+
+    // Think:
+    // "Does this function need information from outside?"
 
 
-// =============================
-// 3. FUNCTION (The Logic)
-// =============================
 
-function makeMove(playerMove) {
+    // --------------------------------------------------
+    // 4. "Add / Insert / Append Information"
+    // --------------------------------------------------
 
-    // At this moment:
-    // playerMove = whatever button sent
-    // game.computerMove = stored value
+    // Prompt wording:
+    // "Add the item to the array"
+    // "Insert a new item"
+    // "Store this new value"
+
+    // Think:
+    // "I am adding something to existing data."
+
+    cart.items.push(item);
 
 
-    if (playerMove === game.computerMove) {
 
-        game.result = "It's a tie!";
+    // --------------------------------------------------
+    // 5. "Update / Modify / Change Data"
+    // --------------------------------------------------
 
-    }
+    // Prompt wording:
+    // "Update the total"
+    // "Modify the object"
+    // "Change the current value"
 
-    else if (
-        playerMove === "paper" && game.computerMove === "rock" ||
-        playerMove === "scissors" && game.computerMove === "paper" ||
-        playerMove === "rock" && game.computerMove === "scissors"
-    ) {
+    // Think:
+    // "The information already exists. I need to change it."
 
-        game.result = "You Win!";
+    cart.total += price;
+
+}
+
+
+
+// --------------------------------------------------
+// 6. "Check / Determine / Decide"
+// --------------------------------------------------
+
+// Prompt wording:
+// "Check if ___"
+// "Determine whether ___"
+// "If ___ is true"
+// "Otherwise"
+
+// Think:
+// "The program needs to choose between outcomes."
+
+function checkout() {
+
+    if (cart.total > 0) {
+
+        console.log(`Total: $${cart.total}`);
 
     }
 
     else {
 
-        game.result = "You Lose!";
+        console.log("Cart is empty");
 
     }
-
-
-    // After logic runs:
-    // object has new information
-
-    result.textContent = game.result;
 
 }
 
 
-// =============================
-// 4. USER ACTIONS
-// =============================
+
+// --------------------------------------------------
+// 7. "Remove / Delete"
+// --------------------------------------------------
+
+// Prompt wording:
+// "Remove the last item"
+// "Delete an element"
+// "Remove from the list"
+
+// Think:
+// "I need to take existing information away."
+
+function removeItem(price) {
+
+    cart.items.pop();
+
+    cart.total -= price;
+
+}
 
 
-rockBtn.addEventListener("click", function(){
 
-    // New information enters program
+// --------------------------------------------------
+// 8. "Find / Search / Check Existence"
+// --------------------------------------------------
 
-    game.playerMove = "rock";
+// Prompt wording:
+// "Check if the item already exists"
+// "Determine if the array contains ___"
+
+// Think:
+// "I need to look inside my data."
+
+if (cart.items.includes("Pizza")) {
+
+    console.log("Item exists");
+
+}
 
 
-    // Send that information into function
 
-    makeMove(game.playerMove);
+// --------------------------------------------------
+// 9. "Loop / Iterate / Repeat"
+// --------------------------------------------------
+
+// Prompt wording:
+// "Loop through the items"
+// "For every item"
+// "Repeat this action"
+
+// Think:
+// "I need to perform the same action multiple times."
+
+for (let i = 0; i < cart.items.length; i++) {
+
+    console.log(cart.items[i]);
+
+}
+
+
+
+// --------------------------------------------------
+// 10. "Return"
+// --------------------------------------------------
+
+// Prompt wording:
+// "Return the result"
+// "Return the filtered items"
+// "Output the value"
+
+// Think:
+// "Send information back to where the function was called."
+
+function getTotal() {
+
+    return cart.total;
+
+}
+
+
+
+// --------------------------------------------------
+// 11. "Display / Show / Render"
+// --------------------------------------------------
+
+// Prompt wording:
+// "Display the result"
+// "Show the information on the page"
+// "Update the webpage"
+
+// Think:
+// "The user needs to see the JavaScript data."
+
+let display = document.getElementById("cartDisplay");
+
+display.textContent = cart.total;
+
+
+
+// --------------------------------------------------
+// 12. "When the User Does Something"
+// --------------------------------------------------
+
+// Prompt wording:
+// "When the button is clicked"
+// "When the user submits"
+// "Respond to user input"
+
+// Think:
+// "I need an event that triggers my function."
+
+button.addEventListener("click", function(){
+
+    addItem("Pizza", 10);
 
 });
-
-
-paperBtn.addEventListener("click", function(){
-
-    game.playerMove = "paper";
-
-    makeMove(game.playerMove);
-
-});
-
-
-scissorsBtn.addEventListener("click", function(){
-
-    game.playerMove = "scissors";
-
-    makeMove(game.playerMove);
-
-});
-
